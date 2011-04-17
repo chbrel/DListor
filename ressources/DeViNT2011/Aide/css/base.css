@@ -1,0 +1,393 @@
+/*
+   Base Style Sheet for the W3C Markup Validation Service.
+
+   Copyright 2000 W3C (MIT, INRIA, Keio). All Rights Reserved.
+   See http://www.w3.org/Consortium/Legal/ipr-notice.html#Copyright
+
+   $Id: base.css,v 1.26.2.46 2004/06/08 15:24:15 ot Exp $
+*/
+
+@import url(results.css); /* CSS for validation results. */
+@import url(navbar.css);  /* CSS for navigation menu. */
+@import url(tips.css);    /* CSS for Quality Tips. */
+@import url(docs.css);    /* CSS for the Documentation. */
+
+html {
+  min-width: 800px;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: 100% 100%;
+  background-color: white;
+  line-height:     120%;
+  color:           black;
+  font-weight:     normal;
+  font-family: "Bitstream Vera Sans", sans-serif;
+  font-style:      normal;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border:  0;
+}
+
+body {
+  background-image: url();
+  background-color: white;
+  line-height:     120%;
+  color:           black;
+  font-weight:     normal;
+  font-family: "Bitstream Vera Sans", sans-serif;
+  font-style:      normal;
+  text-decoration: none;
+  margin:  0;
+  margin-left: 6%;
+  margin-right: 6%;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0;
+}
+
+body { 
+  background-color: white;
+}
+
+div#main {
+  background-color: white;
+  margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div#main p, div#main dt {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+dt {
+  margin-top: 1em;
+}
+
+/* Fieldsets in general */
+fieldset {
+  background: #FCFCFC;
+  border: 1px dotted #053188;
+  margin-left:   1em;
+  margin-right:  1em;
+  padding:       1em;
+}
+
+fieldset legend {
+  color: #053188;
+  background: #FFF;
+  font-variant: small-caps;
+  padding: .1ex .5ex;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+}
+
+.intro {
+  font-style: italic;
+  text-align: justify;
+}
+
+a:link, a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: blue;
+  background-color: #eee;
+}
+
+a:active {
+  color: red;
+  background-color: yellow;
+}
+
+acronym:hover, abbr:hover {cursor: help}
+abbr[title], acronym[title], span[title], strong[title] {
+  border-bottom: thin dotted;
+  cursor: help;
+}
+
+pre, code, tt {
+  font-family: "Bitstream Vera Sans Mono", monospace;
+  line-height: 100%;
+  white-space: pre;
+}
+
+a:link img, a:visited img {border-style: none}
+a img {color: black} /* The only way to hide the border in NS 4.x */
+
+ul.toc {
+  list-style: none;
+}
+
+ol li {
+  padding: .1em;
+}
+
+div.issue {
+  padding: 0.5em;
+  border: none;
+  margin-right: 5%;
+}
+
+.hideme {display: none}
+
+#Notice {
+  border: solid;
+  margin: .2em;
+  padding: .5em;
+  text-align: justify;
+}
+
+/* dt a {color: black} */ /* These are usually targets and not links */
+h1 a {color: black} /* These are usually targets and not links */
+h2 a {color: black} /* These are usually targets and not links */
+h3 a {color: black} /* These are usually targets and not links */
+
+img {vertical-align: middle}
+
+a.formoptions {text-decoration: none; color: black; border-bottom: 1px dotted #0000DD}
+
+/* done vs. tbc for the TODO list */
+.done { text-decoration: line-through; }
+
+address img {
+  float: right;
+  width: 88px;
+}
+
+address {
+  padding-right:    1em;
+  padding-left:     1em;
+  margin-top:       3em;
+  border-top:       1px solid black;
+  background-color: #eee;
+  clear:            right;
+  font-size:        small;
+  text-align:       center;
+}
+
+address {
+/*  background-image: url(images/footer.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;*/
+  height: 8em;
+  background-position: center;
+}
+
+p.copyright {
+  margin-top:     5em;
+  padding-top:    .5em;
+  font-size:      xx-small;
+  max-width:      85ex;
+  text-align:     justify;
+  text-transform: uppercase;
+  margin-left:    auto;
+  margin-right:   auto;
+  font-family:    "Bitstream Vera Sans Mono", monospace;
+  color:          #888;
+  line-height:    120%;
+}
+
+p { 
+  text-align: justify;
+}
+
+p.copyright a {
+  color: #88f;
+  text-decoration: none;
+}
+
+.stb {clear: left}
+
+div.colophon {
+  margin-left: 2em;
+  font-style: italic;
+}
+
+div.colophon em {
+  font-style: normal;
+}
+
+div.align-center { 
+   text-align: center;
+}
+
+/* Various header(ish) things. Definitions cribbed from the CORE Styles. */
+h1 {
+  font-family: "Bitstream Vera Sans", sans-serif;
+  font-size-adjust: .53;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  color: #053188;
+  margin-top: 24pt;
+}
+
+#banner h1 {
+  font-size: 1.5em;
+  display: inline
+}
+
+#banner {
+  min-width: 48em;
+  background-image: url(images/header.jpg); /* only jpg version - png too big! */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right;
+  height: 60px;
+  margin:0; 
+  padding:0;
+}
+
+#banner span.logo-align { 
+  vertical-align: 90%;
+  margin-right: 2%;
+}
+
+#banner #versioninfo {
+  font-size: small;
+  color: #053188;
+}
+
+h1#title {
+/*  background-color: #eee; 
+  border-bottom: 1px solid black; 
+  padding: .25em;*/
+  padding: 0;
+  margin: 0;
+  color: #053188;
+}
+
+/* Used for beta releases. */
+#versioninfo em {
+  color: red;
+}
+
+h1, h2, h3, h4, h5, h6, dt {
+  font-family: "Bitstream Vera Sans", sans-serif;
+  font-size-adjust: .53;
+  font-variant: small-caps;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  background-color: #eee;
+  text-indent: 2em;
+  padding: .2em;
+  border-top: 1px dotted black;
+}
+
+h3 {
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  margin-top : 1em;
+  margin-bottom : 1em;
+  line-height: 120%;  
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+h5, dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  text-indent: .5em;
+  margin:0;
+}
+
+h6 {
+  font-size: 1em;
+  font-style: italic;
+  text-decoration: none;
+  color: #666;
+  text-indent: 1em;
+  margin:0;
+}
+
+/* comma tools table */
+
+td.comma-desc {
+  background: #ffeecc;
+  border : 1px solid black;
+  font-family: "Bitstream Vera Sans", sans-serif
+}
+
+td.comma-shortcut {
+  background: #e7e7ff; 
+  border : 1px solid black;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+td.comma-tool {
+  background: #e7e7ff;
+  border: 1px solid black;
+}
+
+kbd {
+  font-weight: bold;
+}
+
+.shout {
+  background: yellow;
+  border: .5ex dotted black;
+  padding: 1em;
+}
+
+.shout strong {
+  display: block;
+  color: red;
+}
+
+input {
+  vertical-align: middle;
+}
+
+input.reset {
+  text-align: center;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+input.default {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+div#recent {
+  margin-right: 5em;
+}
+
+div#recent dt {
+  margin-top: 1em;
+}
+
+
+span.star {
+  vertical-align: super;
+  color: red;
+  font-style: italic;
+  font-size: 8px;
+}
+
+div.emphasis {
+  background: #eee;
+  border: 1px dotted black;
+}

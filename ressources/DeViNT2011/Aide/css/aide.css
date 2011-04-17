@@ -1,0 +1,152 @@
+.clear {
+	clear:both;	
+}
+
+#listjeux {
+	float:left;
+	width: 18%;
+	border: 1px solid black;
+}
+
+#aidejeu {
+	float:right;
+	width: 78%;
+	border: 1px solid black;
+	margin-top: 16px;
+}
+
+#faq {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.qr {
+	list-style: none;
+	border: 1px black solid;
+	margin-bottom: 10px;
+	padding-left: 0px;
+}
+
+.question {
+	background-color: #DDD;
+	border-bottom: 1px blue solid;
+	color: #053188;
+	padding-bottom: 3px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.reponse {
+	background-color: #EEE;
+	padding: 5px;
+}
+
+.boite {
+	border: 1px black solid;
+	margin-bottom: 10px;
+	padding-left: 0px;
+}
+
+.boite_title {
+	background-color: #DDD;
+	border-bottom: 1px blue solid;
+	color: #053188;
+	padding-bottom: 3px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.boite_content {
+	background-color: #EEE;
+	padding: 5px;
+	text-align: center;
+}
+
+.boite_content ul {
+	list-style: none;	
+}
+
+.jeu_title {
+	text-align: center;	
+}
+
+.jeu_authors {
+	text-align: center;
+	border-left: none;
+	border-right: none;
+}
+
+.jeu_author {
+	float:left;
+	margin-right: 5px;
+	border-right: 1px solid blue;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.jeu_year {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: #EEE;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.jeu_public {
+	float: left;
+	margin-right: 10px;
+	background-color: #EEE;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.jeu_categories {
+	float: left;
+	background-color: #EEE;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.jeu_category {
+	float: left;
+	margin-right: 5px;
+	padding-right: 5px;
+	border-right: 1px solid blue;
+}
+
+.jeu_age {
+	float: left;
+	margin-right: 10px;
+	background-color: #EEE;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.jeu_shortdesc {
+	border-left: none;
+	border-right: none;
+}
+
+.jeu_gamerules {
+	border-left: none;
+	border-right: none;
+}
+
+.jeu_gameplay {
+	border-left: none;
+	border-right: none;
+}
+
+.jeu_notes {
+	border-left: none;
+	border-right: none;
+}
+
+.jeu_notes .boite_content ul {
+	list-style: square;
+}
+
+.jeu_note {
+	
+}

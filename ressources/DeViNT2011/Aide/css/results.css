@@ -1,0 +1,329 @@
+/* style sheet for the validator's results page          */
+/* $Id: results.css,v 1.13.2.35 2004/05/18 02:04:06 link Exp $ */
+
+.input {
+  color: black;
+  background-color: #eee;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+  font-size: small;
+}
+
+/* Various Bits of the Table Header */
+/*
+*/
+fieldset div.moreinfo {
+  float: right;
+  width: 30%;
+}
+
+fieldset div.moreinfo p {
+  background: #FFF;
+  border: 1px solid #CCC;
+  text-align: justify;
+  font-size: smaller;
+}
+
+fieldset div.cheat {
+  clear: both;
+}
+
+
+table.header {
+  clear: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset table.header {
+  float: left;
+  margin: 1ex;
+}
+
+/* Error Messages Display */
+/*
+*/
+.msg {
+  font-weight: bold;
+}
+
+.ve {
+  font-size: smaller;
+  padding: 0;
+  width: 100%;
+}
+
+.ve p {
+  line-height: 100%;
+  font-style: italic;
+  font-size: small;
+  margin: 1ex 5em 1ex 1em;
+  text-align: justify;
+}
+
+p.helpwanted {
+  margin-left:  auto;
+  margin-right: auto;
+  font-size: x-small;
+  color:        #888;
+  text-align:       right;
+}
+
+p.helpwanted a {
+  color: #88f;
+  text-decoration: none;
+}
+
+ol#errors code {
+  margin-bottom: 2ex;
+}
+
+ol#errors li p code strong {
+  color: red;
+  padding-left: .5ex;
+  padding-right: .5ex;
+  font-weight: bolder;
+}
+
+ol#errors li {
+  clear: both; 
+}
+
+/* Source Code Display */
+/*
+*/
+#source div {
+  font-family: "Bitstream Vera Sans Mono", monospace;
+  font-size: smaller;
+  background: #eee;
+  border: 1px solid black;
+  margin: 1em;
+}
+#source div pre {
+  margin: 1em;
+}
+
+#source div pre a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+/* Style for non-parser warnings. */
+/*
+*/
+
+div.Warnings {
+  clear: left;
+  padding: 0;
+  margin-right: 1em;
+}
+
+/* "Fatal" warnings... */
+div.Warnings div.fatal h3 {
+  background: #FCC;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: .5ex;
+  margin: 0;
+  margin-bottom: 1em;
+  float: left;
+  font-size: small;
+  font-weight: bolder;
+}
+
+div.Warnings div.fatal {
+  margin: 0 0 1ex 0;
+  padding: 0;
+  clear: left;
+}
+
+div.Warnings div.fatal div {
+  border: 5px solid #FCC;
+  margin: 0 0 0 1em;
+  padding: .5em 1em;
+}
+
+div.Warnings div.fatal p:first-child {
+  font-weight: bold;
+/*  font-size: normal; */
+  clear: left;
+}
+
+/* "note" warnings... */
+div.Warnings div.note h3 {
+  background: #053188;
+  color: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: .5ex;
+  margin: 0;
+  margin-bottom: 1em;
+  margin-right:  1em;
+  float: left;
+  font-size: small;
+  font-weight: bolder;
+}
+
+div.Warnings div.note {
+  margin: 0 0 1ex 0;
+  padding: 0;
+  clear: left;
+}
+
+div.Warnings div.note div {
+  margin: 0 0 0 1em;
+  padding: .5em 1em;
+}
+/* Not all warnings have a "p", but if they
+   do, the first one should be emphasized. */
+div.Warnings div.note p:first-child {
+  font-weight: bold;
+/*  font-size: normal; */
+  clear:       left;
+}
+
+
+
+
+
+
+th {
+  padding-right: .5em;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+td {
+  text-align: left;
+  padding-left: .5em;
+}
+
+.info {
+  color: black;
+  background: white;
+  border-color: gray;
+}
+
+.warning {
+  color: black;
+  background: silver;
+  border-color: gray;
+}
+
+.error {
+  color: black;
+  background: yellow;
+  border-color: black;
+}
+
+.fatal h2 {
+  color: black;
+  background: red;
+  border: solid black 1px;
+}
+
+h2.valid {
+  text-align: center;
+}
+
+.valid {
+  background:		#053188;
+  color:		white;
+  font-family: "Bitstream Vera Sans", sans-serif;
+  font-size-adjust:	.53;
+  font-size:		1.5em;
+  font-weight:		500;
+  font-style:		normal;
+  text-decoration:	none;
+  word-spacing:		normal;
+  letter-spacing:	normal;
+  text-transform:	none;
+  border-color:		black;
+  padding-top:		.5em;
+  padding-bottom: 	.5em;
+}
+
+.valid a:link {
+  color:      yellow;
+  background: #053188;
+}
+
+.valid a:visited {
+  color: silver;
+  background: #053188;
+}
+
+.valid a:hover {
+  color: #053188;
+  background: #eee;
+}
+
+.valid a:active {
+  color: red;
+  background: yellow;
+}
+
+div#result {
+  clear: left;
+  padding-top: 1em;
+}
+
+h2.valid {
+margin-top: 0;
+margin-bottom: 0;
+}
+h2.invalid {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.invalid {
+  background:		#880531;
+  color:		white;
+  font-family: "Bitstream Vera Sans", sans-serif;
+  font-size-adjust:	.53;
+  font-size:		1.5em;
+  font-weight:		500;
+  font-style:		normal;
+  text-decoration:	none;
+  word-spacing:		normal;
+  letter-spacing:	normal;
+  text-transform:	none;
+  border-color: 	black;
+  padding-top:		.5em;
+  padding-bottom: 	.5em;
+}
+
+.invalid a {
+  color: #0099ff;
+}
+
+.invalid a:visited {
+  color: silver;
+}
+
+.invalid a:hover {
+  color: #880531;
+  background: white;
+}
+
+.invalid a:active {
+  color: red;
+}
+
+img.inline-badge {
+  float: left;
+}
+
+
+
+div.mtb { /* "Medium Thematic Break" */
+  margin-top: 5em;
+  border-top: 1px solid black;
+}
+

@@ -1,0 +1,38 @@
+<infos>
+     <year>2010</year>
+     <gamecategories>
+          <gamecategory>Plate-Forme</gamecategory>
+     </gamecategories>
+     <shortdescription><![CDATA[Tu es Squiggy la grenouille et tu dois traverser l'étang en évitant les îlots remplis de crocodiles.]]></shortdescription>
+     <public>MV</public>
+     <age>7 ans et +</age>
+     <title><![CDATA[Squiggy la grennouille]]></title>
+     <authors>
+          <author><![CDATA[Virginie ACTIS]]></author>
+          <author><![CDATA[Rajaa BRAHIMI]]></author>
+          <author><![CDATA[Rima DIB]]></author>
+          <author><![CDATA[Romaric PIGHETTI]]></author>
+     </authors>
+     <notes>
+          <note><![CDATA[Ce jeu peut utiliser le tapis de danse.]]></note>
+          <note><![CDATA[Que le tapis soit connect&eacute; ou non, on peut utiliser les fl&ecirc;ches directionnelles pour toutes les actions.]]></note>
+          <note><![CDATA[Pour utiliser le tapis il suffit de le connecter avant de démarer le jeu.]]></note>
+     </notes>
+     <gameplay><![CDATA[<p>La navigation dans le menu se fait de la m&ecirc;me mani&egrave;re que dans le menu de choix du jeu.</p>
+<p>Pour ce qui est du jeu:</p>
+<ul>
+  <li>Les fl&ecirc;ches directionnelles permettent de diriger Squiggy</li>
+  <li>Aide (touche F1): permet d'avoir un rappel des r&egrave;gles.</li>
+  <li>F2 permet d'avoir un rappel du nombre de vies restantes </li>
+  <li>F3 permet d'avoir un rappel du nombre de tr&eacute;sors attrap&eacute;s dans le niveau actuel.</li>
+  <li>F4 donne l'&eacute;tat du jeu. Ne dis rien si le jeu est en route, dit qu'il est en pose et comment enlever la pose s'il est en pose.</li>
+  <li>Espace permet de mettre le jeu en pose, de sortir de la pose et de d&eacute;marer.</li>
+  <li>F5 permet de changer le mode graphique, entre les graphismes simples et les dessins.</li>
+  <li>Quitter (touche Echap)  </li>
+</ul>]]></gameplay>
+     <gamerules><![CDATA[<p>Tu est Squiggy la grenouille et tu dois traverser l'&eacute;tang sans te faire d&eacute;vorer par les crocodiles.<br\>
+Il faut donc te d&eacute;placer dans l'eau (bleu) en &eacute;vitant les &icirc;lots (jaunes, qui peuvent &ecirc;tre recouvert d'herbe verte) et en avalant les mouches (noires) pour ne pas &ecirc;tre affam&eacute;e.<br\>
+</p>
+<p>Tu dois manger au moins 10 mouches &agrave; chaque partie de l'&eacute;tang pour ne pas mourir de faim.</p>
+<p>Mais attention, les corcodiles ne sont pas seulement cach&eacute;s sur les &icirc;lots, ils sont aussi &agrave; ta poursuite, donc si tu n'avance pas assez vite, tu auras perdu.</p>]]></gamerules>
+</infos>

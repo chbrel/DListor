@@ -1,0 +1,51 @@
+<infos>
+     <year>2010</year>
+     <gamecategories>
+          <gamecategory>Reflexion</gamecategory>
+          <gamecategory>Divers</gamecategory>
+     </gamecategories>
+     <shortdescription><![CDATA[Multi-jeux de r&eacute;flexion et d'amusement.]]></shortdescription>
+     <public>MV et NV</public>
+     <age>6 à 10 ans</age>
+     <title><![CDATA[DevintParty]]></title>
+     <authors>
+          <author><![CDATA[Romain BARLO]]></author>
+          <author><![CDATA[Arnaud IZARD]]></author>
+          <author><![CDATA[Rapha&euml;l VICENTE]]></author>
+          <author><![CDATA[Micha&euml;l NEZRI]]></author>
+     </authors>
+     <notes>
+          <note><![CDATA[Il faut une r&eacute;solution de 1024 par 768 pixels au moins.]]></note>
+     </notes>
+     <gameplay><![CDATA[<p>D&egrave;s qu'on lance le jeu, on a acc&egrave;s &agrave; des explications suffisantes. Le menu d'accueil contient sept rubriques, on navigue avec les fl&egrave;ches haut et bas. On utilise la touche espace pour valider, on peut utiliser la touche Echap pour terminer :</p>
+<ul>
+  <li><strong>Nouvelle Partie</strong>, lance l'encha&icirc;nement des jeux avec le mode choisi (par d&eacute;faut il  s'agit du mode mal-voyant) </li>
+  <li><strong>Jouer aux jeux de rÈflexion</strong>, permet de jouer aux jeux de r&eacute;fl&egrave;xions de mani&egrave;re individuel  </li>
+  <li><strong>Jouer aux jeux amusants</strong>, permet de jouer aux jeux "fun" de mani&egrave;re individuelle  </li>
+  <li><strong>Jouer &agrave; deux joueurs</strong>, permet de jouer aux jeux de r&eacute;flexions de mani&egrave;re individuelle  </li>
+  <li><strong>Meilleur score</strong>, affiche les meilleurs scores</li>
+  <li><strong>Options</strong>, permet de choisir le mode de jeu (MV ou NV)</li>
+</ul>
+<h4> Liste des jeux de reflexion</h4>
+ <ul>
+ <li> <strong>MemoCarte</strong>, (pour NV et MV) jeu de m&eacute;moire o&ugrave; il faut rep&eacute;rer les paires de cartes identiques.<br>Il se joue avec les flÍches droite et gauche pour se deplacer, espace pour valider</p></li>
+ <li> <strong>Qui Est Le Plus Lourd</strong>, (pour MV)jeu de logique o&ugrave; il faut identifier les figures g&eacute;om&eacute;triques les plus lourdes.<br>Il se joue avec les fl&ecirc;ches droite et gauche pour choisir la bonne forme g&eacute;om&eacute;trique, espace pour valider</p></li>
+ <li> <strong>Memofl&ecirc;che</strong>, (pour NV et MV) jeu de m&eacute;moire o&ugrave; il faut &eacute;couter et retenir les directions, puis<br> une fois la musique commenc&eacute;e, il faut les  repeter &agrave; l'aide du clavier</p></li>
+ <li> <strong>Elephant</strong>, (pour MV et NV) jeu de calcul o&ugrave; il faut ajouter un quand un &eacute;l&eacute;phant sort de l'&eacute;cran par la droite et retrancher un quand un &eacute;l&eacute;phant sort par la gauche.<br>Au d&eacute;but, on commence &agrave; compter &agrave; partir de z&eacute;ro. Une fois la musique finie on utilise les flÍches haut et bas pour rentrer le nombre d&eacute;sir&eacute;  </li>
+</ul>
+ <h4> Liste des jeux "fun" </h4>
+ <ul>
+ <li> <strong>Les Pompiers</strong> (Pour NV et MV) jeu de rapidit&eacute;, jouable ‡ deux joueurs.<br> Le but est d'appuyer en alternance sur les flÍches droite et gauche le plus rapidement possible. En mode deux joueurs, le deuxi&egrave;me joueur utilise les touches Q et D</p></li>
+ <li> <strong>Combat Spatial</strong> (Pour  MV) jeu d'anticipation, jouable ‡ deux joueurs.<br> Le but du jeu est de d&eacute;truire les ennemis. On utilise les fl&ecirc;ches droite et gauche pour jouer, espace pour tirer. En mode deux joueurs le premier joueur utilise les fl&ecirc;ches droite et gauche et fl&ecirc;che du haut pour tirer alors que le joueur deux utilise les touches Q et D  pour se deplacer et Z pour tirer</li>
+ <li> <strong>Attrape le pirate</strong> (Pour MV) jeu d'anticipation.<br> Le but est de faire tomber la bouteille sur le bateau de pirate, pour ce faire on utilise les fl&ecirc;ches droite et gauche pour se d&eacute;placer et espace pour lacher la bouteille</p></li>
+ <li> <strong>Duel de nains</strong> (Pour MV) jeu de rapidit&eacute; et d'anticipation, jouable ‡ deux joueurs.<br> En mode 1 joueur, nous sommes le nain &agrave; gauche  de l'ecran, nous envoyons des haches avec espace, le but est de toucher son adversaire sans se faire toucher. En mode deux joueurs, le deuxieme joueur se d&eacute;place avec les touches Z et X et tire avec D  </li>
+ </ul>
+</p>]]></gameplay>
+     <gamerules><![CDATA[<p> Vous avez la possibiltÈ de jouer ‡ 8 mini-jeux diffÈrents.
+ Le jeu consiste en un encha&icirc;nement de ces mini-jeux.
+ La partie se termine quand le joueur Èchoue ‡ un mini-jeux.
+ Il est possible de jouer individuellement ‡ chaque 
+ mini-jeux pour s'entra&icirc;ner.
+ Les mini-jeux sont sÈparÈs en  deux catÈgories : les jeux de rÈflexion et les jeux "fun".
+ </p>]]></gamerules>
+</infos>

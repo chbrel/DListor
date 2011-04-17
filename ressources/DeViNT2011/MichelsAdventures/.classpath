@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="bin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/user/workspace/MichelsAdventures/MichelsAdventures/bin/jdom.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/user/workspace/MichelsAdventures/MichelsAdventures/bin/slick.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/user/workspace/MichelsAdventures/MichelsAdventures/bin/SI_VOX.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/user/workspace/MichelsAdventures/MichelsAdventures/bin/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MichelsAdventuresRelease/bin"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

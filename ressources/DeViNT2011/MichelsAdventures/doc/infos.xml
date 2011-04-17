@@ -1,0 +1,38 @@
+<infos>
+     <year>2009</year>
+     <gamecategories>
+          <gamecategory>Plate-Forme</gamecategory>
+     </gamecategories>
+     <shortdescription><![CDATA[Le personnage principal est michel, il doit parcourir le monde pour sauver sa copine.]]></shortdescription>
+     <public>MV et NV</public>
+     <age>de 7 à 77 ans</age>
+     <title><![CDATA[Les aventures de Michel le petit DeViNT]]></title>
+     <authors>
+          <author><![CDATA[Nicolas Mottin]]></author>
+          <author><![CDATA[Michel LobatoPinto]]></author>
+          <author><![CDATA[Fredrik Holmstrom]]></author>
+          <author><![CDATA[Clement Rousselle]]></author>
+     </authors>
+     <notes>
+     </notes>
+     <gameplay><![CDATA[<p>D&eacute;s qu'on lance le jeu, on a acc&egrave;s &agrave; des explications suffisantes. Le menu d'accueil contient quatre rubriques, o&ugrave; l'on navigue avec les fl&egrave;ches haut et bas. On utilise la touche entree pour valider, et echap pour quitter l'application :</p>
+<ul>
+  <li>Mode histoire</li>
+  <li>Mode score</li>
+  <li>Option</li>
+  <li>Quitter (touche Echap)  </li>
+   <li>Aide (F1)</li>
+     <li>Pause (P) durant le jeu</li>
+</ul>]]></gameplay>
+     <gamerules><![CDATA[<ul>
+<li>Mode Normal</li>
+<p> Le personnage principal est michel, il doit parcourir le monde pour sauver sa copine.<br>
+ Lorsque vous entendez une combinaison, vous devez appuyer sur les touches indiquÈes pour que michel saute l'obstacle. Si vous entrez une mauvaise combinaison ou que vous l'entrez trop tard, alors vous perdez une vie.<br>
+Vous disposez de 3 vies au dÈpart. Le jeu se termine lorsque vous perdez toute vos vies ou lorsque vous arrivez ‡ la fin du jeu et dÈlivrez la petite amie de Michel.<br>
+Si vous finissez un niveau sans perdre de vie, vous gagnerez une vie</p>
+<li>Mode Score</li>
+<p> Vous controlez Michel et vous devez aller le plus loin possible dans le niveau. AprÈs chaque obstacle, la vitesse augmente et de temps en temps le nombre de touche pour la combinaison varie (allant de 1 ‡ 3). <br>
+Lorsque vous perdez, si vous Ítes dans le top 10 vous pourrez enregistrer votre score</p>
+
+</ul>]]></gamerules>
+</infos>
