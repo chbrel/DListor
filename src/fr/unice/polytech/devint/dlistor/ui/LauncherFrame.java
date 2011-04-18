@@ -25,6 +25,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.border.LineBorder;
 
 import org.jdom.Element;
@@ -72,6 +73,7 @@ public class LauncherFrame extends DevintFrame {
 	
 	private JPanel rightPanel;
 	private JLabel descriptionLabel;
+	private JPanel mainPane;
 	
 	// le répertoire qui contient les jeux
 	//    private String pathRepertoire = "../../";
@@ -82,8 +84,8 @@ public class LauncherFrame extends DevintFrame {
 	}
 
 	protected void init() {
-		// TODO Auto-generated method stub
 		this.pathRepertoire = "../ressources/DeViNT2011/";
+		this.optionCourante = -1;
 
 		creerLayout();
 		creerAttributs();
@@ -91,39 +93,17 @@ public class LauncherFrame extends DevintFrame {
 		Entete entete = new Entete(couleurTexteSelectionne, couleurBoutonSelectionne);
 		placement.setConstraints(entete, regles);
 		this.add(entete);
-
-		JPanel mainPane = new JPanel();
-		
-		GridBagLayout layout = new GridBagLayout();
-		GridBagConstraints c = new GridBagConstraints();
-		
-		mainPane.setLayout(layout);
 		
 		this.boutons = creerOption();
-		
-		c.fill = GridBagConstraints.HORIZONTAL;
-		c.weightx = 4;
-		c.gridx = 0;
-		c.gridy = 0;
-		
-		mainPane.add(this.boutons, c);
-		
-		this.rightPanel = new JPanel();
-		this.descriptionLabel = new JLabel("description");
-		this.rightPanel.add(this.descriptionLabel);
-		
-		c.weightx = 1;
-		c.gridx = 1;
-		c.gridy = 0;
-		
-		mainPane.add(rightPanel, c);
+
+		creerMainPane();
 		
 		// poids relatif de 3 (i.e 3 fois plus grand que l'entête
 		regles.weighty=6;
 		// on ajuste verticalement et horizontalement
 		regles.fill = GridBagConstraints.BOTH;
-		placement.setConstraints(mainPane, regles);
-		this.add(mainPane);
+		placement.setConstraints(this.mainPane, regles);
+		this.add(this.mainPane);
 
 		JButton quitter = creerQuitter();
 		this.add(quitter);
@@ -136,6 +116,39 @@ public class LauncherFrame extends DevintFrame {
 		this.setMaximumSize(appDim);
 		
 		this.pack();
+	}
+	
+	private void creerMainPane() {
+		this.mainPane = new JPanel();
+		//this.mainPane.setPreferredSize(new Dimension(800,600));
+		GridBagLayout layout = new GridBagLayout();
+		GridBagConstraints c = new GridBagConstraints();
+		
+		this.mainPane.setLayout(layout);
+		//TODO là aussi
+		//this.boutons.setPreferredSize(new Dimension(600,600));
+		this.boutons.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		c.fill = GridBagConstraints.BOTH;
+		c.weightx = 1.0;
+		c.weighty = 1.0;
+		c.gridwidth = 1;
+		c.gridx = 0;
+		c.gridy = 0;
+		
+		this.mainPane.add(this.boutons, c);
+		
+		this.rightPanel = new JPanel();
+		this.descriptionLabel = new JLabel("<html><div>description</div><div><u>test:</u>blablxgjdfjgxfyjdjdyjdstyjdstyjdtyjdtyjdtyjdtjtyja</div></html>");
+		this.descriptionLabel.setPreferredSize(new Dimension(200,600));
+		this.rightPanel.add(this.descriptionLabel);
+
+		c.gridwidth = GridBagConstraints.REMAINDER;
+		c.gridheight = GridBagConstraints.REMAINDER;
+		c.weightx = 0.25;
+		c.gridx = 4;
+		c.gridy = 0;
+		
+		this.mainPane.add(rightPanel, c);
 	}
 
 	/** créé le layout pour placer les composants
@@ -182,6 +195,8 @@ public class LauncherFrame extends DevintFrame {
 		// création des boutons
 		// panel des boutons
 		JPanel boutons = new JPanel();
+		//TODO Ajout là aussi
+		boutons.setPreferredSize(new Dimension(600,600));
 		boutons.setLayout(new GridLayout(fileRepertoires.length, 1));
 
 		// les boutons
@@ -228,7 +243,6 @@ public class LauncherFrame extends DevintFrame {
 		quitter.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
 				System.exit(0);
 			}
 
@@ -269,7 +283,6 @@ public class LauncherFrame extends DevintFrame {
 		this.boutonOption[i].addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
 				if (optionCourante!=-1) unFocusedButton(optionCourante);
 				optionCourante=i;
 				setFocusedButton(optionCourante);
@@ -293,6 +306,7 @@ public class LauncherFrame extends DevintFrame {
 		b.setForeground(couleurTexte);
 		b.setFont(fonteBouton);
 		b.setBorder(new LineBorder(Color.BLACK,5));
+		//TODO Ici est le prefered size des boutons.
 		b.setPreferredSize(new Dimension(SCREEN_WIDTH-200,HBOUTON));
 	}
 
@@ -309,7 +323,7 @@ public class LauncherFrame extends DevintFrame {
 		descriptionContent += "</html>";
 		
 		this.descriptionLabel.setText(descriptionContent);
-		
+				
 		this.pack();
 	}
 
