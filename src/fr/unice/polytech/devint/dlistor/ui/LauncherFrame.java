@@ -50,6 +50,7 @@ public class LauncherFrame extends DevintFrame {
 	private Integer[] gamesAnnee;
 	private String[] gamesShortDescription;
 	private String[] gamesPublic;
+	private final String[] excludedDirectories = {"jre","lib","Listor","DListor","Aide"};
 	
 	private JScrollPane boutons;
 
@@ -84,7 +85,7 @@ public class LauncherFrame extends DevintFrame {
 	}
 
 	protected void init() {
-		this.pathRepertoire = "../ressources/DeViNT2011/";
+		this.pathRepertoire = ".."+File.separator+".."+File.separator;
 		this.optionCourante = -1;
 
 		creerLayout();
@@ -138,7 +139,7 @@ public class LauncherFrame extends DevintFrame {
 		this.mainPane.add(this.boutons, c);
 		
 		this.rightPanel = new JPanel();
-		this.descriptionLabel = new JLabel("<html><div>description</div><div><u>test:</u>blablxgjdfjgxfyjdjdyjdstyjdstyjdtyjdtyjdtyjdtjtyja</div></html>");
+		this.descriptionLabel = new JLabel("<html></html>");
 		this.descriptionLabel.setPreferredSize(new Dimension(200,600));
 		this.rightPanel.add(this.descriptionLabel);
 
@@ -190,7 +191,7 @@ public class LauncherFrame extends DevintFrame {
 		// affectation des tableaux liés aux répertoires des jeux
 		File f = new File(this.pathRepertoire);
 		String[] nomRepertoires = f.list();
-		this.fileRepertoires = new File[nomRepertoires.length-4];//On enlève jre,lib,Listor,Aide
+		this.fileRepertoires = new File[nomRepertoires.length-this.excludedDirectories.length];//On enlève jre,lib,Listor,Aide
 
 		// création des boutons
 		// panel des boutons
@@ -211,10 +212,7 @@ public class LauncherFrame extends DevintFrame {
 		for(int i =0; i < nomRepertoires.length; i++) {
 			// n'affiche que les repertoires
 			if (new File(pathRepertoire + "" + nomRepertoires[i]).isDirectory() 
-					&& !nomRepertoires[i].equals("Listor") 
-					&& !nomRepertoires[i].equals("Aide")
-					&& !nomRepertoires[i].equals("lib")
-					&& !nomRepertoires[i].equals("jre")) {
+					&& !excluded(nomRepertoires[i])) {
 
 				// si le fichier d'info est present dans le projet :
 				if ((f = new File(pathRepertoire + File.separator + nomRepertoires[i] + File.separator + "doc" + File.separator + "infos.xml")).exists()){
@@ -227,6 +225,15 @@ public class LauncherFrame extends DevintFrame {
 
 		// le scoll qui contient les boutons
 		return new JScrollPane(boutons);
+	}
+	
+	private boolean excluded(String repertoire) {
+		for (int i = 0; i < excludedDirectories.length; i++) {
+			if(excludedDirectories[i].equals(repertoire)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private JButton creerQuitter() {
