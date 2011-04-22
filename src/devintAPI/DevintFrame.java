@@ -125,5 +125,6 @@ public abstract class DevintFrame extends JFrame implements  KeyListener{
     	if (e.getKeyCode()==KeyEvent.VK_F2){
     		voix.playWav("../ressources/sons/" + sonAide);
     	}
+
     }
 }

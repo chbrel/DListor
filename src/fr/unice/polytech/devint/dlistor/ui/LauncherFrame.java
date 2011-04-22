@@ -20,7 +20,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -50,8 +52,9 @@ public class LauncherFrame extends DevintFrame {
 	private Integer[] gamesAnnee;
 	private String[] gamesShortDescription;
 	private String[] gamesPublic;
-	private final String[] excludedDirectories = {"jre","lib","Listor","DListor","Aide"};
+	private String[] excludedDirectories;
 	
+	private JPanel boutonsPane;
 	private JScrollPane boutons;
 
 	// l'option courante qui est sélectionnée
@@ -86,6 +89,9 @@ public class LauncherFrame extends DevintFrame {
 
 	protected void init() {
 		this.pathRepertoire = ".."+File.separator+".."+File.separator;
+		//this.excludedDirectories = new String[]{"jre","lib","Listor","DListor","Aide"};
+		this.excludedDirectories = new String[]{"jre","lib","DListor","Aide"};
+		
 		this.optionCourante = -1;
 
 		creerLayout();
@@ -107,7 +113,21 @@ public class LauncherFrame extends DevintFrame {
 		this.add(this.mainPane);
 
 		JButton quitter = creerQuitter();
+		regles.weighty=1;
+		// espace vertical avant de le placer
+//		regles.ipady=1000;
+		// on ajuste seulement horizontalement
+		regles.fill = GridBagConstraints.BOTH;
+		placement.setConstraints(quitter, regles);
 		this.add(quitter);
+		
+		scSize = this.boutons.getSize();
+		nbBoutonByView = (scSize.height / HBOUTON)-1;
+		
+		Dimension boutonsPaneDim = new Dimension(scSize.width, this.nbOptions * HBOUTON);
+		this.boutonsPane.setSize(boutonsPaneDim);
+		this.boutonsPane.setPreferredSize(boutonsPaneDim);
+		this.boutonsPane.setMaximumSize(boutonsPaneDim);
 		
 		Dimension appDim = new Dimension(SCREEN_DIM.width, SCREEN_DIM.height-100);
 		
@@ -115,6 +135,8 @@ public class LauncherFrame extends DevintFrame {
 		this.setPreferredSize(appDim);
 		this.setMinimumSize(appDim);
 		this.setMaximumSize(appDim);
+		
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		
 		this.pack();
 	}
@@ -130,7 +152,7 @@ public class LauncherFrame extends DevintFrame {
 		//this.boutons.setPreferredSize(new Dimension(600,600));
 		this.boutons.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		c.fill = GridBagConstraints.BOTH;
-		c.weightx = 1.0;
+		c.weightx = 1.5;
 		c.weighty = 1.0;
 		c.gridwidth = 1;
 		c.gridx = 0;
@@ -139,10 +161,29 @@ public class LauncherFrame extends DevintFrame {
 		this.mainPane.add(this.boutons, c);
 		
 		this.rightPanel = new JPanel();
+		GridBagLayout layoutRP = new GridBagLayout();
+		GridBagConstraints cRP = new GridBagConstraints();
+		cRP.fill = GridBagConstraints.BOTH;
+		cRP.weightx = 1.0;
+		cRP.weighty = 1.0;
+		cRP.gridwidth = 1;
+		cRP.gridx = 0;
+		cRP.gridy = 0;
+		this.rightPanel.setLayout(layoutRP);
+		this.rightPanel.setBackground(Color.WHITE);
 		this.descriptionLabel = new JLabel("<html></html>");
-		this.descriptionLabel.setPreferredSize(new Dimension(200,600));
-		this.rightPanel.add(this.descriptionLabel);
+		
+//		this.descriptionLabel.setPreferredSize();
+		
+		this.rightPanel.add(this.descriptionLabel, cRP);
 
+		Dimension dRP = new Dimension(10,600);
+		this.rightPanel.setSize(dRP);
+		this.rightPanel.setPreferredSize(dRP);
+		this.rightPanel.setMaximumSize(dRP);
+		this.rightPanel.setMinimumSize(dRP);
+		
+		
 		c.gridwidth = GridBagConstraints.REMAINDER;
 		c.gridheight = GridBagConstraints.REMAINDER;
 		c.weightx = 0.25;
@@ -180,8 +221,8 @@ public class LauncherFrame extends DevintFrame {
 		couleurTexteSelectionne = new Color(10,0,150);
 		// mise à jour des attributs des boutons
 		fonteBouton = new Font("Tahoma",1,56);
-		couleurBouton=couleurTexteSelectionne;
-		couleurBoutonSelectionne=couleurTexte;
+		couleurBouton = new Color(10,0,150);
+		couleurBoutonSelectionne = Color.WHITE;
 	}
 
 	/** 
@@ -195,10 +236,11 @@ public class LauncherFrame extends DevintFrame {
 
 		// création des boutons
 		// panel des boutons
-		JPanel boutons = new JPanel();
+		this.boutonsPane = new JPanel();
 		//TODO Ajout là aussi
-		boutons.setPreferredSize(new Dimension(600,600));
-		boutons.setLayout(new GridLayout(fileRepertoires.length, 1));
+//		this.boutonsPane.setPreferredSize(new Dimension(600,600));
+//		this.boutonsPane.setPreferredSize(new Dimension(600, boutons.getPreferredSize().height));
+		this.boutonsPane.setLayout(new GridLayout(fileRepertoires.length, 1));
 
 		// les boutons
 		this.boutonOption = new JButton[fileRepertoires.length];
@@ -217,14 +259,14 @@ public class LauncherFrame extends DevintFrame {
 				// si le fichier d'info est present dans le projet :
 				if ((f = new File(pathRepertoire + File.separator + nomRepertoires[i] + File.separator + "doc" + File.separator + "infos.xml")).exists()){
 							creerBouton(nbOptions, nomRepertoires[i], f);
-							boutons.add(boutonOption[nbOptions]);
+							this.boutonsPane.add(boutonOption[nbOptions]);
 							nbOptions++;
 				}
 			}
 		}
 
 		// le scoll qui contient les boutons
-		return new JScrollPane(boutons);
+		return new JScrollPane(this.boutonsPane);
 	}
 	
 	private boolean excluded(String repertoire) {
@@ -324,9 +366,10 @@ public class LauncherFrame extends DevintFrame {
 		boutonOption[i].setForeground(couleurTexteSelectionne);
 		
 		String descriptionContent = "<html>";
-		descriptionContent += "<div><u>Année: </u>" + this.gamesAnnee[i] + "</div>";
-		descriptionContent += "<div><u>Public: </u>" + this.gamesPublic[i] + "</div>";
-		descriptionContent += "<div><u>Description: </u>" + this.gamesShortDescription[i] + "</div>";
+		descriptionContent += "<div style=\"font-size: 18px;\"><u style=\"color:blue;font-weight:bold;\">Titre:</u> " + this.boutonOption[i].getText() + "</div><br/>";
+		descriptionContent += "<div style=\"font-size: 18px\"><u style=\"color:blue;font-weight:bold;\">Année:</u> " + this.gamesAnnee[i] + "</div><br/>";
+		descriptionContent += "<div style=\"font-size: 18px\"><u style=\"color:blue;font-weight:bold;\">Public:</u> " + this.gamesPublic[i] + "</div><br/>";
+		descriptionContent += "<div style=\"font-size: 18px\"><u style=\"color:blue;font-weight:bold;\">Description:</u> " + this.gamesShortDescription[i] + "</div><br/>";
 		descriptionContent += "</html>";
 		
 		this.descriptionLabel.setText(descriptionContent);
@@ -375,6 +418,22 @@ public class LauncherFrame extends DevintFrame {
 				scrolle(UP,optionCourante);
 				setFocusedButton(optionCourante);
 			}
+		}
+		
+		if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+			String gameDesc = "Titre du jeu: " + this.boutonOption[optionCourante].getText() + ".";
+			gameDesc += "Public: ";
+			if(this.gamesPublic[optionCourante].equals("MV")) {
+				gameDesc += "Mal Voyant.";
+			} else if(this.gamesPublic[optionCourante].equals("NV")) {
+				gameDesc += "Non Voyant.";
+			} else if(this.gamesPublic[optionCourante].equals("MV et NV")) {
+				gameDesc += "Mal Voyant et Non Voyant.";
+			}
+			gameDesc += "Description: ";
+			gameDesc += this.gamesShortDescription[optionCourante] + ".";
+			
+			voix.playText(gameDesc);
 		}
 	}
 
